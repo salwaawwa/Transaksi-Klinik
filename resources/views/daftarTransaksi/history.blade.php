@@ -5,7 +5,7 @@
         <h2>Daftar Transaksi</h2>
         <hr>
 
-        <table class="table table-striped">
+        <table class="table table-striped" id="myTable">
             <thead>
                 <tr>
                     <th>No</th>
@@ -32,7 +32,7 @@
                             @endif
                         </td>
                         <td>
-                        <a href="#" class="btn btn-primary">
+                        <a href="{{ url('history') }}/{{ $pesanan->id}}" class="btn btn-primary">
                         <i class="fa fa-info"></i> Detail Pesanan</a>
                         </td>
                     </tr>

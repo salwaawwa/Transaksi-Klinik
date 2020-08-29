@@ -7,7 +7,7 @@
                 <h2>Transaksi</h2>
             </div>
             <div class="col-md-6">
-                <?php
+                <!--?php
                 $pesanan_utama = \App\Pesanan::where('user_id', Auth::user()->id)->first();
                 if(!empty($pesanan_utama))
                 {
@@ -20,7 +20,10 @@
                         @if(!empty($notif))
                             <span class="badge badge-pill badge-danger">{{$notif}}</span>
                         @endif
-                    </a>       
+                    </a-->       
+                    <a class="nav-link" href="{{ url('check-out') }}">
+                        <i class="fa fa-shopping-cart"></i> 
+                    </a>
             </div>
         </div>
         

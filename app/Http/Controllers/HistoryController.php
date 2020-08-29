@@ -10,7 +10,7 @@ use Auth;
 class HistoryController extends Controller
 {
     public function index(){
-        $pesanans = Pesanan::where('user_id', Auth::user()->id)->where('status', '!=',0)->get();
+        $pesanans = Pesanan::all();
         return view('daftarTransaksi.history', compact('pesanans'));
     }
 
