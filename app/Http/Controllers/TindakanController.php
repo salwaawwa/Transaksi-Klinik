@@ -19,6 +19,11 @@ class TindakanController extends Controller
         return view('dataTindakan.datatindakan',compact('obats'));
     }
 
+    public function cetakTindakan(){
+        $cetakobats = Obat::all();
+        return view('dataTindakan.cetak-datatindakan',compact('cetakobats'));
+    }
+
     public function create(){
         return view('dataTindakan.create');
     }

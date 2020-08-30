@@ -15,7 +15,7 @@
                     <h6>dr. Ginanda Putra Siregar, SpU</h6>
                 </div>
                 <div class="col-md-6">
-                <p>Medan, {{$pesanan->tanggal}}<br>
+                <p style="padding-left:190px;">Medan, {{$pesanan->tanggal}}<br>
                    Kepada Yth : <br>
                    No. Nota : {{$pesanan->invoice_number}}
                 </p>

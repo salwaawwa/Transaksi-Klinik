@@ -5,7 +5,12 @@
         <h2>Data Tindakan</h2>
         <hr>
 
-        <a href="dataTindakan/create" class="btn btn-primary mb-3">Tambah Tindakkan</a>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="dataTindakan/create" class="btn btn-primary mb-3">Tambah Tindakkan <i class="fas fa-plus-square" ></i></a>
+                <a href="{{ route('cetak-tindakan') }}" target="_blank" class="btn btn-info mb-3">Cetak Data <i class="fas fa-print" ></i></a>
+            </div>
+        </div>
 
         <table  class="table table-striped" id="myTable">
             <thead>

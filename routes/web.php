@@ -33,4 +33,9 @@ Route::get('konfirmasi-check-out','TransaksiController@konfirmasi');
 //Daftar Transaksi
 Route::get('history','HistoryController@index');
 Route::get('history/{id}','HistoryController@detail');
+Route::delete('history/{id}','HistoryController@destroy');
 
+//Print
+Route::get('/cetak-tindakan','TindakanController@cetakTindakan')->name('cetak-tindakan');
+Route::get('/cetak-index','HistoryController@cetakIndex')->name('cetak-index');
+//Route::get('cetak-detail/{id}','HistoryController@cetakDetail');

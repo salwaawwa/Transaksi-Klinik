@@ -5,6 +5,12 @@
         <h2>Daftar Transaksi</h2>
         <hr>
 
+        <div class="row">
+            <div class="col-md-6">
+                <a href="{{ route('cetak-index') }}" target="_blank" class="btn btn-info mb-3">Cetak Data <i class="fas fa-print" ></i></a>
+            </div>
+        </div>
+
         <table class="table table-striped" id="myTable">
             <thead>
                 <tr>
@@ -35,6 +41,13 @@
                         <a href="{{ url('history') }}/{{ $pesanan->id}}" class="btn btn-primary">
                         <i class="fa fa-info"></i> Detail Pesanan</a>
                         </td>
+                        <!--td>
+                            <form action="{{ url('history') }}/{{ $pesanan->id}}" method="post">
+                                  @csrf
+                                  {{ method_field('DELETE')}}
+                                  <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Anda Yakin Akan Menghapus Pesanan? ');"><i class="fa fa-trash"></i></button>
+                              </form>
+                        </td-->
                     </tr>
                 @endforeach
             </tbody>

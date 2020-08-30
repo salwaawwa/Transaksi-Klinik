@@ -1,13 +1,10 @@
-@extends('layout1')
-@section('title','Daftar Transaksi')
-@section('content')
-    @section('back')
-        <a href="{{ url('history')}}" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Kembali </a>
-    @endsection
+<html>
+    <head>
+        <title> Cetak Nota </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body>
     <div class="container">
-    <div class="row justify-content-center">
-    <div class="col-xl-10 col-lg-12 col-md-9">
-      <div class="card o-hidden border-0 shadow-lg my-5">
         <div class="card-body p-0">
           <!-- Nested Row within Card Body -->
           <div class="p-5">
@@ -27,7 +24,7 @@
 
             <table class="table table-striped mt-3">
                 <thead>
-                    <tr>
+                    <tr align="center">
                         <th>No</th>
                         <th>Nama Tindakan/Obat</th>
                         <th>Harga Satuan</th>
@@ -63,15 +60,17 @@
                 <br>
                 <p> {{ Auth::user()->name }}</p>
               </div>
-                <a style="margin-left:700px;" href="{{ url('cetak-detail') }}/{{ $pesanan->id}}" class="btn btn-success mt-4" onclick="return confirm('Cetak Struk? ');">
-                  <i class="fa fa-print">Cetak</i>
-                </a>
             @endif
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
 </div>
-@endsection
+
+        <script type="text/javascript">
+            window.print();
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+</html>

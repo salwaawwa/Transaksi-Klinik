@@ -21,8 +21,8 @@
                             <span class="badge badge-pill badge-danger">{{$notif}}</span>
                         @endif
                     </a-->       
-                    <a class="nav-link" href="{{ url('check-out') }}">
-                        <i class="fa fa-shopping-cart"></i> 
+                    <a style="padding-left:190px;" class="nav-link" href="{{ url('check-out') }}">
+                        <i class="fa fa-shopping-cart"> Check-Out</i> 
                     </a>
             </div>
         </div>
